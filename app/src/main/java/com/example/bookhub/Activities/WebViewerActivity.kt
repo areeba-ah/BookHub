@@ -55,13 +55,13 @@ class WebViewerActivity : ComponentActivity() {
             return
         }
 
-        // Prepare the share intent with the URL
+        // share intent with the URL
         val shareIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
             putExtra(Intent.EXTRA_TEXT, "Check out this link: $url")  // The message to share
         }
 
-        // Use the Intent.createChooser method to show the share options dialog
+        //Intent.createChooser method to show the share options dialog
         try {
             startActivity(Intent.createChooser(shareIntent, "Share via"))
         } catch (e: Exception) {

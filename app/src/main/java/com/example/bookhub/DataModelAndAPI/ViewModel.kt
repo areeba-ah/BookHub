@@ -32,8 +32,6 @@ class BooksViewModel(private val database: AppDatabase): ViewModel() {
     private var currentIndex = 0
     private val maxResults = 40
 
-    var lastSearchQuery by mutableStateOf("")
-
     val savedBooks = mutableStateOf<List<SavedBookEntity>>(emptyList())
 
     suspend fun doesBookExist(bookId: String): Boolean {
