@@ -1,8 +1,13 @@
 <resources>
-    <string name="app_name">.QuickNotes.</string>
+    <string name="app_name">.Book_Hub.</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_create_note">CreateNoteActivity</string>
     <string name="title_activity_view_edit_note">ViewEditNoteActivity</string>
-    <string name="noFavItem">No Item in Favourites!</string>
+    <string name="noSavedBook">Your saved list is empty!</string>
     <string name="noNotes">No Notes Avavilable!</string>
+    <string name="title_activity_web_viewer">WebViewerActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="about_app">
+    "Book Hub is your personal book tracker, making it easy to search, explore, and save books! Powered by the Google Books API, this app helps you discover new books and keep track of the ones you love.\n\n🔍 Search &amp; Explore: Find books from an extensive online catalog using the Google Books API.\n\n💾 Save Books (Room Database): Bookmark books and store their details locally – no downloads, just essential info!\n\n📖 Detailed Book Info: View book descriptions, authors, and other metadata.\n\n💡 Smart Suggestions: Get recommendations based on your searches.\n\n🎨 Modern &amp; Intuitive UI: Built with Jetpack Compose for a smooth user experience.\n\nKeep track of your reading journey with Book Hub! 📚✨"
+</string>
 </resources>

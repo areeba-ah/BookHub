@@ -2,14 +2,16 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin) // Explicitly add the kapt plugin
 }
 
 android {
-    namespace = "com.example.quicknotes"
+    namespace = "com.example.bookhub"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.quicknotes"
+        applicationId = "com.example.bookhub"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
@@ -36,13 +38,29 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
 dependencies {
+    // Retrofit for API calls
+    //noinspection UseTomlInstead
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    //noinspection UseTomlInstead
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    implementation(libs.room.runtime)
+    implementation(libs.play.services.maps)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    //noinspection KaptUsageInsteadOfKsp
+    kapt(libs.room.compiler) // Use kapt for annotation processing
+    implementation(libs.room.ktx) // Kotlin extensions for Room
+
     //noinspection UseTomlInstead
     implementation ("com.google.code.gson:gson:2.10.1")
-
+    implementation (libs.coil.compose)
+    implementation (libs.coil.svg)
     implementation (libs.androidx.lifecycle.viewmodel.compose) // For ViewModel and LiveData integration
     implementation(libs.navigation.compose)
     implementation(libs.androidx.core.ktx)

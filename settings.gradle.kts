@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "QuickNotes"
+rootProject.name = "BookHub"
 include(":app")
